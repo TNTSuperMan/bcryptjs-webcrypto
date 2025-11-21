@@ -1,7 +1,7 @@
 {
   "name": "bcryptjs-webcrypto",
   "description": "This is a fork of bcryptjs, it removes the Node.js import.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "TNTSuperMan",
   "contributors": [
     "Daniel Wirtz <dcode@dcode.io> (https://github.com/dcodeIO)",
