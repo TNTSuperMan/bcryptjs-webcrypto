@@ -53,7 +53,7 @@ function randomBytes(len) {
   // Custom fallback specified with `setRandomFallback`.
   if (!randomFallback) {
     throw Error(
-      "Neither WebCryptoAPI nor a crypto module is available. Use bcrypt.setRandomFallback to set an alternative",
+      "No WebCryptoAPI is available. Use bcrypt.setRandomFallback to set an alternative",
     );
   }
   return randomFallback(len);
