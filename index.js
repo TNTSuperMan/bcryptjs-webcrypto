@@ -29,7 +29,6 @@
 // The Node.js crypto module is used as a fallback for the Web Crypto API. When
 // building for the browser, inclusion of the crypto module should be disabled,
 // which the package hints at in its package.json for bundlers that support it.
-import nodeCrypto from "crypto";
 
 /**
  * The random implementation to use as a fallback.
@@ -50,10 +49,6 @@ function randomBytes(len) {
   // Web Crypto API. Globally available in the browser and in Node.js >=23.
   try {
     return crypto.getRandomValues(new Uint8Array(len));
-  } catch {}
-  // Node.js crypto module for non-browser environments.
-  try {
-    return nodeCrypto.randomBytes(len);
   } catch {}
   // Custom fallback specified with `setRandomFallback`.
   if (!randomFallback) {
